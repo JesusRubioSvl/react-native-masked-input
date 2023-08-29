@@ -15,7 +15,7 @@ let options = {
 export default function App() {
   const [result, setResult] = React.useState<string | number>(0);
 
-  const onChangeCallback = useCallback((maskedText) => {
+  const onChangeCallback = useCallback((maskedText: React.SetStateAction<string | number>) => {
     setResult(maskedText);
   }, []);
   return (
