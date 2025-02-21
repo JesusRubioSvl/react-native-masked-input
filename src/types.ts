@@ -7,7 +7,7 @@
  */
 
 import type { TextInput, TextInputProps } from 'react-native';
-import type { ReactText, Ref } from 'react';
+import type { ReactNode, Ref } from 'react';
 
 // Type prop of TextInputMask.
 export type TextInputMaskTypeProp =
@@ -24,10 +24,10 @@ export type TextInputMaskTypeProp =
 
 export type MaskHandlerReturnType = { maskedText: string; rawText: number };
 
-export type ValueType = ReactText;
+export type ValueType = ReactNode;
 
 export interface MaskHandlerInterface<
-  Options extends TextInputOptionBaseInterface
+  Options extends TextInputOptionBaseInterface,
 > {
   getMask: (value: ValueType, settings?: Options) => string;
   getRawValue: (maskedValue: ValueType, settings: Options) => number;
@@ -104,7 +104,7 @@ type TextInputPropsWithoutValue = Pick<
 >;
 // TextInputMask Props
 export interface TextInputMaskProps<
-  Options extends TextInputOptionBaseInterface = TextInputMaskOptionProp
+  Options extends TextInputOptionBaseInterface = TextInputMaskOptionProp,
 > extends Pick<
     TextInputProps,
     Exclude<keyof TextInputPropsWithoutValue, 'onChangeText'>
