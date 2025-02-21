@@ -11,7 +11,7 @@ import type {
   TextInputOptionBaseInterface,
   ValueType,
 } from './types';
-import type { ReactText, RefObject } from 'react';
+import type { RefObject } from 'react';
 import React from 'react';
 
 type State = {
@@ -21,7 +21,7 @@ type State = {
 export default class TextInputMask<
   Options extends TextInputOptionBaseInterface
 > extends BaseTextComponent<TextInputMaskProps<Options>, State> {
-  _inputElement!: RefObject<TextInput>;
+  _inputElement!: RefObject<TextInput | null>;
 
   constructor(props: TextInputMaskProps<Options>) {
     super(props);
@@ -40,7 +40,7 @@ export default class TextInputMask<
     return this._inputElement;
   }
 
-  setContent = (maskedText: ReactText, rawText: number) => {
+  setContent = (maskedText: string | number, rawText: number) => {
     if (this.props.onChangeText) {
       this._trySetNativeProps(maskedText);
       this.props.onChangeText(maskedText, rawText);
