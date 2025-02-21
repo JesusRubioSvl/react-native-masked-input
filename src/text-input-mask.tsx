@@ -19,7 +19,7 @@ type State = {
 };
 
 export default class TextInputMask<
-  Options extends TextInputOptionBaseInterface
+  Options extends TextInputOptionBaseInterface,
 > extends BaseTextComponent<TextInputMaskProps<Options>, State> {
   _inputElement!: RefObject<TextInput | null>;
 
