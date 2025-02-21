@@ -15,9 +15,12 @@ let options = {
 export default function App() {
   const [result, setResult] = React.useState<string | number>(0);
 
-  const onChangeCallback = useCallback((maskedText: React.SetStateAction<string | number>) => {
-    setResult(maskedText);
-  }, []);
+  const onChangeCallback = useCallback(
+    (_maskedText: React.ReactNode, rawValue: number) => {
+      setResult(rawValue);
+    },
+    []
+  );
   return (
     <View style={styles.container}>
       <MaskedInput

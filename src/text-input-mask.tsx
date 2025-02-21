@@ -11,7 +11,7 @@ import type {
   TextInputOptionBaseInterface,
   ValueType,
 } from './types';
-import type { RefObject } from 'react';
+import type { RefObject, ReactNode } from 'react';
 import React from 'react';
 
 type State = {
@@ -40,7 +40,7 @@ export default class TextInputMask<
     return this._inputElement;
   }
 
-  setContent = (maskedText: string | number, rawText: number) => {
+  setContent = (maskedText: ReactNode, rawText: number) => {
     if (this.props.onChangeText) {
       this._trySetNativeProps(maskedText);
       this.props.onChangeText(maskedText, rawText);
