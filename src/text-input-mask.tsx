@@ -1,10 +1,5 @@
-import {
-  TextInput,
-  Platform,
-  NativeSyntheticEvent,
-  TextInputFocusEventData,
-  KeyboardTypeOptions,
-} from 'react-native';
+import { TextInput, Platform, KeyboardTypeOptions } from 'react-native';
+
 import BaseTextComponent from './base-text-component';
 import type {
   TextInputMaskProps,
@@ -88,7 +83,7 @@ export default class TextInputMask<
     this.setContent(maskedText, rawText);
   }
 
-  _handleBlur(e: NativeSyntheticEvent<TextInputFocusEventData>) {
+  _handleBlur(e: any) {
     this.setState({
       focused: false,
     });
@@ -107,7 +102,7 @@ export default class TextInputMask<
     }
   }
 
-  _handleFocus(e: NativeSyntheticEvent<TextInputFocusEventData>) {
+  _handleFocus(e: any) {
     this.setState({
       focused: true,
     });
