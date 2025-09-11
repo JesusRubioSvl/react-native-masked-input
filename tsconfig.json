@@ -23,5 +23,27 @@
     "strict": true,
     "allowJs": true,
     "target": "esnext"
-  }
+  },
+  "exclude": [
+    "babel.config.js",
+    "example/babel.config.js",
+    "example/index.js",
+    "example/metro.config.js",
+    "example/webpack.config.js",
+    "src/internal-dependencies/vanilla-masker.js",
+    "src/mask-resolver.js",
+    "src/masks/_base.mask.js",
+    "src/masks/cel-phone.mask.js",
+    "src/masks/cnpj.mask.js",
+    "src/masks/cpf.mask.js",
+    "src/masks/credit-card.mask.js",
+    "src/masks/custom.mask.js",
+    "src/masks/datetime.mask.js",
+    "src/masks/index.js",
+    "src/masks/money.mask.js",
+    "src/masks/only-letters.mask.js",
+    "src/masks/only-numbers.mask.js",
+    "src/masks/zip-code.mask.js",
+    "src/text-mask.js"
+  ]
 }

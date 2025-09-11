@@ -116,6 +116,8 @@ export interface TextInputMaskProps<
   refInput?: Ref<TextInput>;
   customTextInput?: any;
   value: ValueType;
+  onFocus?: (e: any) => void;
+  onBlur?: (e: any) => void;
 }
 
 // TextMaskMethods
