@@ -27,10 +27,8 @@
   },
   "exclude": [
     "babel.config.js",
-    "example/babel.config.js",
-    "example/index.js",
-    "example/metro.config.js",
-    "example/webpack.config.js",
+    "example",
+    "src/__tests__",
     "src/internal-dependencies/vanilla-masker.js",
     "src/mask-resolver.js",
     "src/masks/_base.mask.js",
